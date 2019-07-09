@@ -1,4 +1,6 @@
 package ben.sample.com.myapplication.Controllers;
 
-public class BaseController {
+import androidx.lifecycle.ViewModel;
+
+public class BaseController extends ViewModel {
 }
