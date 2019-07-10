@@ -1,47 +1,40 @@
 package ben.sample.com.myapplication.Views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
+import android.view.MenuItem;
+import android.widget.Toast;
 
-import ben.sample.com.myapplication.Controllers.MainController;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import ben.sample.com.myapplication.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-    MainController mainController = new MainController();
-    TextView textView;
+public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewModelProviders.of(this).get(MainController.class);
-
-        textView = findViewById(R.id.textView);
-        findViewById(R.id.button).setOnClickListener(this);
-
-        mainController.SetLiseners(this, new Observer<String>() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onChanged(String o) {
-                textView.setText(textView.getText() + " " + o );
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_recents:
+                        Toast.makeText(MainActivity.this, "Recents", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_favorites:
+                        Toast.makeText(MainActivity.this, "Favorites", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_nearby:
+                        Toast.makeText(MainActivity.this, "Nearby", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
             }
         });
-    }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.button:
-            mainController.buttonClicked();
-                break;
-        }
     }
-
 
 }
