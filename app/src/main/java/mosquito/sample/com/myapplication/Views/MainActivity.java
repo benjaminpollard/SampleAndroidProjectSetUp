@@ -1,10 +1,10 @@
-package ben.sample.com.myapplication.Views;
+package mosquito.sample.com.myapplication.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import ben.sample.com.myapplication.R;
+import mosquito.sample.com.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 

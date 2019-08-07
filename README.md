@@ -21,7 +21,19 @@ Make use of the of the bottom nav bar.<br/>
 https://material.io/develop/android/components/bottom-navigation-view/
 
 #### Exmaple:
-![Alt text](https://i.ibb.co/CnvjyMV/Screenshot-2019-08-05-at-15-35-24.png)
+![Alt text](img/stru.png)
+
+#### Refactoring for your use:
+For your own use you will have to change the packages ids to your own projects packages names.
+
+There are many ways to do this the easiest way to do is to go into the Android manifiest in the manifest folder.
+
+on the package="mosquito.sample.com.myapplication" tag, hover over the section you want to change , right click and press refactor , press ok to the warning and change it to what value you want.
+![Alt text](img/manifest.png)
+
+Then Make sure to change the ApplicastionId in the gradle file to match the new package name you have set up , as shown below
+
+![Alt text](img/gradle.png)
 
 
 ## TODO: 

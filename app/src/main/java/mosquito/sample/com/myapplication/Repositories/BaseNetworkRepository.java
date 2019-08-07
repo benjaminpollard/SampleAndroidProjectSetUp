@@ -1,4 +1,4 @@
-package ben.sample.com.myapplication.Repositories;
+package mosquito.sample.com.myapplication.Repositories;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

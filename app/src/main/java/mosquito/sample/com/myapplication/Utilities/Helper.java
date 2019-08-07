@@ -1,4 +1,4 @@
-package ben.sample.com.myapplication.Utilities;
+package mosquito.sample.com.myapplication.Utilities;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;

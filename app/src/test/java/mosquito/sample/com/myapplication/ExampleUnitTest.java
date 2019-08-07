@@ -1,4 +1,4 @@
-package ben.sample.com.myapplication;
+package mosquito.sample.com.myapplication;
 
 import org.junit.Test;
 
